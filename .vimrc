@@ -17,17 +17,11 @@ set autoindent
 "検索で小文字なら大文字を無視、大文字なら無視しない設定
 set smartcase
 
-"(no)検索をファイルの末尾まで検索したら、ファイルの先頭へループする
-set nowrapscan
-
 "インクリメンタルサーチを行う
 set incsearch
 
 "highlight matches with last search pattern
 set hlsearch
-
-"(no)ウィンドウの幅を超える行の折り返し設定
-set nowrap
 
 "タブ文字、行末など不可視文字を表示する
 set list
@@ -67,14 +61,14 @@ set nobackup
 set listchars=tab:>-
 
 "カーソルの上または下に表示する最小限の行数
-set scrolloff=5
+set scrolloff=10
 
 "ステータスラインを表示するウィンドウを設定する
 "2:常にステータスラインを表示する
 set laststatus=2
 
 "ステータス行の表示内容を設定する
-set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+set statusline=%F%m%r%h%w\ [POS=%04l,%04v][%p%%]\ [LEN=%L]\ %{fugitive#statusline()}
 
 "=======================================================
 " FileTypes
@@ -110,6 +104,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'rails.vim'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
+NeoBundle 'The-NERD-tree'
+NeoBundle 'tpope/vim-fugitive'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
