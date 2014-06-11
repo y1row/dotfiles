@@ -1,4 +1,49 @@
 "=======================================================
+" NeoBundle
+"=======================================================
+if has('vim_starting')
+  set nocompatible               " Be iMproved
+
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" My Bundles here:
+" unite
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimproc'
+" molokai カラースキーム
+NeoBundle 'tomasr/molokai'
+" uniteでcolorscheme
+NeoBundle 'ujihisa/unite-colorscheme'
+" ステータスバーをかっこよく
+NeoBundle 'bling/vim-airline'
+" rails
+NeoBundle 'rails.vim'
+" ツリー表示
+NeoBundle 'The-NERD-tree'
+" Gitの操作
+NeoBundle 'tpope/vim-fugitive'
+" ファイルエクスプローラ (CTRL+P)
+NeoBundle 'kien/ctrlp.vim'
+
+" You can specify revision/branch/tag.
+NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+
+call neobundle#end()
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+
+"=======================================================
 " Basic
 "=======================================================
 "(no)swapファイルを作る
@@ -71,7 +116,14 @@ set scrolloff=10
 set laststatus=2
 
 "ステータス行の表示内容を設定する
-set statusline=%F%m%r%h%w\ [POS=%04l,%04v][%p%%]\ [LEN=%L]\ %{fugitive#statusline()}
+"set statusline=%F%m%r%h%w\ [POS=%04l,%04v][%p%%]\ [LEN=%L]\ %{fugitive#statusline()}
+
+"=======================================================
+" Keymaps
+"=======================================================
+" タブ移動
+nnoremap <C-j> gT
+nnoremap <C-k> gt
 
 "=======================================================
 " FileTypes
@@ -80,41 +132,27 @@ filetype on
 filetype indent on
 
 "=======================================================
-" ColorScheme
+" Color
 "=======================================================
-syntax on
+syntax enable
 set background=dark
-colorscheme hybrid
+let g:molokai_original=1
+let g:rehash256=1
+set t_Co=256
+colorscheme molokai
+
+" Airlinebar config
+let g:airline_theme='luna'
+set laststatus=2
 
 "=======================================================
-" NeoBundle
+" ctrlp
 "=======================================================
-if has('vim_starting')
-  set nocompatible               " Be iMproved
-
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" My Bundles here:
-NeoBundle 'rails.vim'
-NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'chriskempson/vim-tomorrow-theme'
-NeoBundle 'The-NERD-tree'
-NeoBundle 'tpope/vim-fugitive'
-
-" You can specify revision/branch/tag.
-NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
-
-call neobundle#end()
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
+" デフォルトでファイル名検索
+let g:ctrlp_by_filename = 1
+" デフォルトで正規表現検索
+let g:ctrlp_regexp = 1
+" 高さ大きめ
+let g:ctrlp_match_window = 'max:15'
+" vim終了時にキャッシュクリアしない
+let g:ctrlp_clear_cache_on_exit = 0
