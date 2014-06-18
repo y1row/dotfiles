@@ -115,8 +115,8 @@ set scrolloff=10
 "2:常にステータスラインを表示する
 set laststatus=2
 
-"ステータス行の表示内容を設定する
-"set statusline=%F%m%r%h%w\ [POS=%04l,%04v][%p%%]\ [LEN=%L]\ %{fugitive#statusline()}
+" vimgrepとかの後で自動でQuickfix開く
+au QuickfixCmdPost make,grep,grepadd,vimgrep copen
 
 "=======================================================
 " Keymaps
@@ -142,8 +142,22 @@ set t_Co=256
 colorscheme molokai
 
 " Airlinebar config
-let g:airline_theme='luna'
-set laststatus=2
+let g:airline_section_a = airline#section#create(['mode','','branch'])
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#tab_nr_type = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+set guifont=Ricty\ Regular\ for\ Powerline:h14
+let g:Powerline_symbols = 'fancy'
+set t_Co=256
+let g:airline_theme='badwolf'
+let g:airline_left_sep = '⮀'
+let g:airline_right_sep = '⮂'
+let g:airline_linecolumn_prefix = '⭡'
+let g:airline_branch_prefix = '⭠'
+let g:airline#extensions#tabline#left_sep = '⮀'
+let g:airline#extensions#tabline#left_alt_sep = '⮀'
 
 "=======================================================
 " ctrlp
