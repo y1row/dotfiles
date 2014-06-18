@@ -141,17 +141,15 @@ let g:rehash256=1
 set t_Co=256
 colorscheme molokai
 
-" Airlinebar config
-let g:airline_section_a = airline#section#create(['mode','','branch'])
+" Airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_buffers = 1
 let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#readonly#enabled = 0
 
-set guifont=Ricty\ Regular\ for\ Powerline:h14
-let g:Powerline_symbols = 'fancy'
-set t_Co=256
-let g:airline_theme='badwolf'
+let g:airline_theme='wombat'
 let g:airline_left_sep = '⮀'
 let g:airline_right_sep = '⮂'
 let g:airline_linecolumn_prefix = '⭡'
