@@ -33,7 +33,10 @@ NeoBundle 'The-NERD-tree'
 NeoBundle 'tpope/vim-fugitive'
 " ファイルエクスプローラ (CTRL+P)
 NeoBundle 'kien/ctrlp.vim'
-
+" Ruby向けにendを自動挿入してくれる
+NeoBundle 'tpope/vim-endwise'
+" インデントに色を付けて見やすくする
+NeoBundle 'nathanaelkane/vim-indent-guides'
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
@@ -115,8 +118,8 @@ set scrolloff=10
 "2:常にステータスラインを表示する
 set laststatus=2
 
-" vimgrepとかの後で自動でQuickfix開く
-au QuickfixCmdPost make,grep,grepadd,vimgrep copen
+" grep(系コマンド)の後、自動でQuickfix開く
+autocmd QuickFixCmdPost *grep* cwindow
 
 "=======================================================
 " Keymaps
@@ -124,6 +127,8 @@ au QuickfixCmdPost make,grep,grepadd,vimgrep copen
 " タブ移動
 nnoremap <C-j> gT
 nnoremap <C-k> gt
+" grでカーソル下のキーワードをGgrep
+nnoremap <silent><expr> g* ':Ggrep ' . expand('<cword>') . '<CR>'
 
 "=======================================================
 " FileTypes
@@ -143,7 +148,7 @@ colorscheme molokai
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#branch#enabled = 1
@@ -168,3 +173,13 @@ let g:ctrlp_regexp = 1
 let g:ctrlp_match_window = 'max:15'
 " vim終了時にキャッシュクリアしない
 let g:ctrlp_clear_cache_on_exit = 0
+
+"=======================================================
+" indent
+"=======================================================
+" vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
+let g:indent_guides_enable_on_vim_startup = 1
+" 手動で色設定
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * : highlight IndentGuidesOdd  ctermbg=236
+autocmd VimEnter,Colorscheme * : highlight IndentGuidesEven ctermbg=black
