@@ -52,6 +52,9 @@ NeoBundleCheck
 "(no)swapファイルを作る
 set noswapfile
 
+"(no)undoファイルを作る
+set noundofile
+
 "(no)VimをなるべくVi互換にする
 set nocompatible
 
@@ -120,6 +123,11 @@ set laststatus=2
 
 " grep(系コマンド)の後、自動でQuickfix開く
 autocmd QuickFixCmdPost *grep* cwindow
+
+"ビープ音すべてを無効にする
+set visualbell t_vb=
+"エラーメッセージの表示時にビープを鳴らさない
+set noerrorbells 
 
 "=======================================================
 " Keymaps
