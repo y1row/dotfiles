@@ -19,10 +19,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " unite
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc'
-" molokai カラースキーム
-NeoBundle 'tomasr/molokai'
-" uniteでcolorscheme
-NeoBundle 'ujihisa/unite-colorscheme'
 " ステータスバーをかっこよく
 NeoBundle 'bling/vim-airline'
 " rails
@@ -39,6 +35,9 @@ NeoBundle 'tpope/vim-endwise'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+" Tomorrow Theme
+NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'chriskempson/vim-tomorrow-theme'
 
 call neobundle#end()
 
@@ -154,7 +153,11 @@ set background=dark
 let g:molokai_original=1
 let g:rehash256=1
 set t_Co=256
-colorscheme molokai
+if ($ft=='ruby')
+    colorscheme Tomorrow-Night
+else
+    colorscheme hybrid
+endif
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
