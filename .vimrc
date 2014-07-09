@@ -128,6 +128,8 @@ autocmd QuickFixCmdPost *grep* cwindow
 set visualbell t_vb=
 "エラーメッセージの表示時にビープを鳴らさない
 set noerrorbells 
+"行を強調表示
+set cursorline
 
 "=======================================================
 " Keymaps
