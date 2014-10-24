@@ -138,6 +138,8 @@ nnoremap <C-j> gT
 nnoremap <C-k> gt
 " grでカーソル下のキーワードをGgrep
 nnoremap <silent><expr> g* ':Ggrep ' . expand('<cword>') . '<CR>'
+" インサートモードでjjと押すと抜ける
+inoremap <silent> jj <ESC>
 
 "=======================================================
 " FileTypes
