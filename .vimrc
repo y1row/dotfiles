@@ -150,7 +150,7 @@ filetype indent on
 "=======================================================
 " Color
 "=======================================================
-"syntax enable
+syntax enable
 set background=dark
 let g:molokai_original=1
 let g:rehash256=1
