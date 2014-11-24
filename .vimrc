@@ -35,9 +35,13 @@ NeoBundle 'tpope/vim-endwise'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
-" Tomorrow Theme
+" hybrid Theme
 NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'chriskempson/vim-tomorrow-theme'
+" molokai Theme
+NeoBundle 'tomasr/molokai'
+" ruby用のテキストオブジェクト
+NeoBundle "rhysd/vim-textobj-ruby"
+NeoBundle "kana/vim-textobj-user"
 
 call neobundle#end()
 
@@ -152,14 +156,9 @@ filetype indent on
 "=======================================================
 syntax enable
 set background=dark
-let g:molokai_original=1
 let g:rehash256=1
 set t_Co=256
-if ($ft=='ruby')
-    colorscheme Tomorrow-Night
-else
-    colorscheme hybrid
-endif
+colorscheme hybrid
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
