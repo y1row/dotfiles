@@ -19,6 +19,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " unite
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc'
+" complete, snippet
+NeoBundle 'Shougo/neocomplete'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 " ステータスバーをかっこよく
 NeoBundle 'bling/vim-airline'
 " rails
@@ -131,8 +135,8 @@ autocmd QuickFixCmdPost *grep* cwindow
 set visualbell t_vb=
 "エラーメッセージの表示時にビープを鳴らさない
 set noerrorbells 
-"行を強調表示
-"set cursorline
+"そのまま貼り付け
+set paste
 
 "=======================================================
 " Keymaps
