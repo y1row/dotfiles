@@ -1,0 +1,69 @@
+"=======================================================
+" NeoBundle
+"=======================================================
+" Note: Skip initialization for vim-tiny or vim-small.
+if !1 | finish | endif
+
+if has('vim_starting')
+  set nocompatible               " Be iMproved
+
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+"=======================================================
+" bundle
+"=======================================================
+" unite
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimproc'
+" filer
+NeoBundle 'Shougo/vimfiler'
+" shell
+NeoBundle 'Shougo/vimshell'
+" complete, snippet
+NeoBundle 'Shougo/neocomplete'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
+" ツリー表示
+NeoBundle 'scrooloose/nerdtree'
+" ステータスバー
+NeoBundle 'bling/vim-airline'
+" ファイルエクスプローラ (CTRL+P)
+NeoBundle 'kien/ctrlp.vim'
+" hybrid Theme
+NeoBundle 'w0ng/vim-hybrid'
+" テキストオブジェクト
+NeoBundle "kana/vim-textobj-user"
+" OmniSharp
+NeoBundle 'nosami/Omnisharp'
+NeoBundle "tpope/vim-dispatch"
+" シンタックスチェック
+NeoBundle "scrooloose/syntastic"
+
+" for Ruby
+" Ruby向けにendを自動挿入してくれる
+NeoBundle 'tpope/vim-endwise'
+" Ruby用テキストオブジェクト
+NeoBundle "rhysd/vim-textobj-ruby"
+" rails
+NeoBundle 'rails.vim'
+
+"=======================================================
+" bundle (end)
+"=======================================================
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
