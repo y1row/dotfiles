@@ -24,7 +24,7 @@ nnoremap <S-Up>    <C-w>-<CR>
 nnoremap <S-Down>  <C-w>+<CR>
 
 " Ctrl + e で NERDTree をトグル
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
+nnoremap <silent><C-a> :NERDTreeToggle<CR>
 
 " ctrlp
 let g:ctrlp_map = '<S-r>'

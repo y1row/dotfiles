@@ -27,8 +27,3 @@ source ~/dotfiles/.vimrc.plugin_settings
 " neocomplete
 "=======================================================
 source ~/dotfiles/.vimrc.neocomplete
-
-"=======================================================
-" neocomplete (OmniSharp)
-"=======================================================
-source ~/dotfiles/.vimrc.neocomplete_omnisharp
