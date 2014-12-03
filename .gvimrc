@@ -11,7 +11,7 @@ colorscheme hybrid
 " ほか
 "=======================================================
 " 透明度
-set transparency=8
+set transparency=5
 
 " 行を強調表示
 set cursorline

@@ -28,3 +28,7 @@ nnoremap <silent><C-a> :NERDTreeToggle<CR>
 
 " ctrlp
 let g:ctrlp_map = '<S-r>'
+
+" easyalign
+vmap <Enter> <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
