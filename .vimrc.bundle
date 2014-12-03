@@ -47,6 +47,8 @@ NeoBundle 'nosami/Omnisharp'
 NeoBundle "tpope/vim-dispatch"
 " シンタックスチェック
 NeoBundle "scrooloose/syntastic"
+" 位置揃え
+NeoBundle "junegunn/vim-easy-align"
 
 " for Ruby
 " Ruby向けにendを自動挿入してくれる

@@ -63,9 +63,6 @@ augroup omnisharp_commands
     " Automatically add new cs files to the nearest project on save
     autocmd BufWritePost *.cs call OmniSharp#AddToProject()
 
-    " Automatically formating code on save
-    autocmd BufWritePost *.cs call OmniSharp#CodeFormat()
-
     "show type information automatically when the cursor stops moving
     autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
 
