@@ -23,8 +23,8 @@ nnoremap <S-Right> <C-w>><CR>
 nnoremap <S-Up>    <C-w>-<CR>
 nnoremap <S-Down>  <C-w>+<CR>
 
-" Ctrl + a で NERDTree をトグル
-nnoremap <silent><C-a> :NERDTreeToggle<CR>
+" t 2回で NERDTree をトグル
+nnoremap <silent> tt :NERDTreeToggle<CR>
 
 " easyalign
 vmap <Enter> <Plug>(EasyAlign)
