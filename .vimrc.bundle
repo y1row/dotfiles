@@ -50,15 +50,17 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'w0ng/vim-hybrid'
 " テキストオブジェクト
 NeoBundle "kana/vim-textobj-user"
-" OmniSharp
-NeoBundle 'nosami/Omnisharp'
-NeoBundle "tpope/vim-dispatch"
 " シンタックスチェック
 NeoBundle "scrooloose/syntastic"
 " 位置揃え
 NeoBundle "junegunn/vim-easy-align"
+" メソッド定義元へのジャンプ
+NeoBundle 'szw/vim-tags'
 
 " for Ruby
+" Rsense
+NeoBundle 'marcus/rsense'
+NeoBundle 'supermomonga/neocomplete-rsense.vim'
 " Ruby向けにendを自動挿入してくれる
 NeoBundle 'tpope/vim-endwise'
 " Ruby用テキストオブジェクト
