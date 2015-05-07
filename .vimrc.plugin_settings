@@ -17,12 +17,6 @@ let g:ctrlp_mruf_max = 1000
 let g:ctrlp_mruf_case_sensitive = 0
 
 "=======================================================
-" Rsense
-"=======================================================
-"let g:rsenseHome = '/usr/local/bin/rsense'
-let g:rsenseUseOmniFunc = 1
-
-"=======================================================
 " rubocop
 "=======================================================
 " syntastic_mode_mapをactiveにするとバッファ保存時にsyntasticが走る

@@ -58,9 +58,6 @@ NeoBundle "junegunn/vim-easy-align"
 NeoBundle 'szw/vim-tags'
 
 " for Ruby
-" Rsense
-NeoBundle 'marcus/rsense'
-NeoBundle 'supermomonga/neocomplete-rsense.vim'
 " Ruby向けにendを自動挿入してくれる
 NeoBundle 'tpope/vim-endwise'
 " Ruby用テキストオブジェクト
