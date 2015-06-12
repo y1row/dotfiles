@@ -1,9 +1,18 @@
 "=======================================================
 " Keymaps
 "=======================================================
-" タブ移動 (shift+jで左, shift+kで右)
-nnoremap <S-j> gT
-nnoremap <S-k> gt
+" 特殊キー登録
+" Ctrl + カーソルキー
+set <C-Right>=^[[C
+set <C-Left>=^[[D
+
+" Ctrl + 左右キーでタブを切り替え
+nnoremap <C-Right> :<C-u>tabn<CR>
+nnoremap <C-Left> :<C-u>tabp<CR>
+inoremap <C-Right> <ESC>:tabn<CR>
+inoremap <C-Left> <ESC>:tabp<CR>
+cnoremap <C-Right> <C-u>tabn
+cnoremap <C-Left> <C-u>tabp
 
 " インサートモードでjjと押すと抜ける
 inoremap <silent> jj <ESC>
