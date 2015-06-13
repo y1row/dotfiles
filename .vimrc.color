@@ -3,11 +3,15 @@
 "=======================================================
 syntax enable
 set background=dark
-let g:rehash256=1
 set t_Co=256
-colorscheme hybrid
+let g:rehash256 = 1
+let g:solarized_termtrans = 1
+let g:solarized_termcolors = 256
+let g:solarized_visibility = "low"
+colorscheme solarized
 
 " Airline
+let g:airline_theme='solarized'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#tab_nr_type = 1
@@ -15,7 +19,6 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#readonly#enabled = 0
 
-let g:airline_theme='wombat'
 let g:airline_left_sep = '⮀'
 let g:airline_right_sep = '⮂'
 let g:airline_linecolumn_prefix = '⭡'

@@ -47,7 +47,7 @@ NeoBundle 'bling/vim-airline'
 " ファイルエクスプローラ (CTRL+P)
 NeoBundle 'kien/ctrlp.vim'
 " hybrid Theme
-NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'altercation/vim-colors-solarized'
 " テキストオブジェクト
 NeoBundle "kana/vim-textobj-user"
 " シンタックスチェック
