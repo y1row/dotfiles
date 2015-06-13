@@ -67,7 +67,9 @@ set nobackup
 set list
 
 "listで表示される文字のフォーマットを指定する
-set listchars=tab:»-,extends:»,precedes:«,nbsp:%,eol:↲
+set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
+highlight SpecialKey ctermbg=none " make the highlighting of tabs less annoying
+set showbreak=↪
 
 "カーソルの上または下に表示する最小限の行数
 set scrolloff=10
