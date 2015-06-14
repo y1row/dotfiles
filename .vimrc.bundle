@@ -48,8 +48,8 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'bling/vim-airline'
 " ファイルエクスプローラ (CTRL+P)
 NeoBundle 'kien/ctrlp.vim'
-" hybrid Theme
-NeoBundle 'altercation/vim-colors-solarized'
+" colorcheme
+NeoBundle 'jpo/vim-railscasts-theme'
 " テキストオブジェクト
 NeoBundle "kana/vim-textobj-user"
 " シンタックスチェック
