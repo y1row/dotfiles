@@ -1,6 +1,3 @@
-" 行を強調表示
-set cursorline
-
 " 半角文字の設定
 set guifont=Ricty_for_Powerline:h16
 
