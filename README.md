@@ -4,7 +4,7 @@ dotfiles
 .vimrcとか
 
 ##導入
-`git clone` した後で
+ホームディレクトリに `git clone` した後で
 ```
 $ cd dotfiles
 $ git submodule
