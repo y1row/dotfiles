@@ -1,14 +1,10 @@
 ########
 # main view
 ########
-# チーム開発しているとよくremoteで更新が入るため手元に同期
-bind main <Ctrl-r> !git pull --rebase
 
 ########
 # branch view
 ########
-# リモートブランチをtrackしつつチェックアウト
-bind branch T !git checkout -t %(branch)
 # カーソル行のブランチを親にして入力した名前のブランチを作成
 bind branch n !git checkout -b %(prompt) %(branch)
 # 不要になったブランチを削除（squash mergeや別リポジトリへのmergeをするワークフロー用）
