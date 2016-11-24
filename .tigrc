@@ -5,8 +5,8 @@
 ########
 # branch view
 ########
-# カーソル行のブランチを親にして入力した名前のブランチを作成
-bind branch n !git checkout -b %(prompt) %(branch)
+# origin/masterを親にして入力した名前のブランチを作成
+bind branch n !git checkout -b %(prompt) origin/master
 # 不要になったブランチを削除（squash mergeや別リポジトリへのmergeをするワークフロー用）
 bind branch D !?git branch -D %(branch)
 # 不要になったブランチを削除
